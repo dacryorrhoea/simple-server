@@ -1,0 +1,36 @@
+{{define "users"}}
+
+<!doctype html>
+<html lang="ru" class="h-100">
+<head>
+    <title>Title</title>
+</head>
+
+<style>
+    body {
+        text-align: center;
+    }
+    .main {
+        display: inline-block;
+    }
+</style>
+
+<body class="d-flex flex-column h-100">
+    <div class="main">
+        <table class="table">
+            <th>№</th>
+            <th>Name</th>
+
+            {{range .}}
+            <tr>
+                <td>{{.Number}}</td>
+                <td>{{.Name}}</td>
+            </tr>
+            {{end}}
+
+        </table>
+    </div>
+</body>
+</html>
+
+{{end}}
